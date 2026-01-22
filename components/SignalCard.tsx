@@ -54,29 +54,29 @@ export default function SignalCard({ signal }: SignalCardProps) {
       </View>
 
       {/* Data Grid - Bento Style */}
-      <View className="flex-row gap-2 mb-4">
+      <View className="flex-row gap-2 mb-5">
         {/* Entry */}
-        <View className="flex-1 bg-surfaceHighlight rounded-2xl p-3 items-center">
-            <Text className="text-textMuted text-[10px] font-bold uppercase tracking-wider mb-1">Entry</Text>
-            <Text className="text-white font-bold text-base">{signal.entry}</Text>
+        <View className="flex-1 bg-surfaceHighlight rounded-2xl p-4 items-center justify-center">
+            <Text className="text-textMuted text-xs font-bold uppercase tracking-widest mb-1.5 opacity-70">Entry</Text>
+            <Text className="text-white font-extrabold text-lg tracking-tight">{signal.entry}</Text>
         </View>
         
         {/* TP */}
-        <View className="flex-1 bg-accent/10 rounded-2xl p-3 items-center border border-accent/20">
-            <Text className="text-accent/80 text-[10px] font-bold uppercase tracking-wider mb-1">Target</Text>
-            <Text className="text-accent font-bold text-base">{signal.tp}</Text>
+        <View className="flex-1 bg-accent/15 rounded-2xl p-4 items-center justify-center border border-accent/20">
+            <Text className="text-accent text-xs font-bold uppercase tracking-widest mb-1.5 opacity-90">Target</Text>
+            <Text className="text-accent font-extrabold text-lg tracking-tight">{signal.tp}</Text>
         </View>
 
         {/* SL */}
-        <View className="flex-1 bg-surfaceHighlight rounded-2xl p-3 items-center">
-             <Text className="text-textMuted text-[10px] font-bold uppercase tracking-wider mb-1">Stop</Text>
-             <Text className="text-textMuted font-bold text-base">{signal.sl}</Text>
+        <View className="flex-1 bg-danger/10 rounded-2xl p-4 items-center justify-center border border-danger/10">
+             <Text className="text-danger text-xs font-bold uppercase tracking-widest mb-1.5 opacity-80">Stop</Text>
+             <Text className="text-danger font-extrabold text-lg tracking-tight">{signal.sl}</Text>
         </View>
       </View>
 
       {/* Footer */}
-      <View className="flex-row items-center justify-between pt-2">
-         <Text className="text-textMuted text-xs font-medium flex-1 mr-4" numberOfLines={1}>
+      <View className="flex-row items-start justify-between">
+         <Text className="text-gray-300 text-base font-medium flex-1 mr-4 leading-6" numberOfLines={3}>
            {signal.notes}
          </Text>
          <TouchableOpacity 
